@@ -8,3 +8,9 @@ class User {
         this.accountBalance += amount;   // the specific user's account increases by the amount of the value received
     }
 }
+
+uido.makeDeposit(100)
+guido.makeDeposit(200)
+monty.makeDeposit(50)
+console.log(guido.accountBalance)	// output: 300
+console.log(monty.accountBalance)	// output: 50
