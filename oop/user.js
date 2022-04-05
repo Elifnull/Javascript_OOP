@@ -5,13 +5,16 @@ class User {
         this.accountBalance = 0
     }
     makeDeposit(amount) {// takes a parameter this is the amount of the deposit
-        this.accountBalance += amount;   // the specific user's account increases by the amount of the value received
+        this.accountBalance += amount;
+        return(this)   // the specific user's account increases by the amount of the value received
     }
     makeWithdrawl(amount) {
         this.accountBalance -= amount;
+        return(this)
     }
     balance() {
         console.log(`acount balance: ${this.accountBalance}`);
+        return( this )
     }
 }
 
