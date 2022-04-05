@@ -7,6 +7,9 @@ class User {
     makeDeposit(amount) {// takes a parameter this is the amount of the deposit
         this.accountBalance += amount;   // the specific user's account increases by the amount of the value received
     }
+    makeWithdrawl(amount) {
+        this.accountBalance -= amount;
+    }
 }
 
 uido.makeDeposit(100)
