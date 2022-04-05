@@ -10,6 +10,9 @@ class User {
     makeWithdrawl(amount) {
         this.accountBalance -= amount;
     }
+    balance() {
+        console.log(`acount balance: ${this.accountBalance}`);
+    }
 }
 
 uido.makeDeposit(100)
