@@ -6,14 +6,16 @@ class BankAccount {
     }
     deposit(amount) {
         this.balance += amount;
+        console.log(`$${this.balance}`);
     }
     withdraw(amount) {
         if(this.balance > amount){
             this.balance -= amount;
         } else {
             console.log(`insufficient amout you will be charged $5`);
-            this.balance -= amount;
+            this.balance -= 5;
         }
+        console.log(`$${this.balance}`);
         
     }
     displayAccountInfo() {
@@ -25,3 +27,13 @@ class BankAccount {
         }
     }
 }
+
+const bank = new BankAccount();
+const bank2 = new BankAccount(0.06, 200);
+
+bank.withdraw(1);
+
+bank.deposit(300);
+bank2.deposit(1000);
+
+bank.withdraw(100);
