@@ -8,12 +8,20 @@ class BankAccount {
         this.balance += amount;
     }
     withdraw(amount) {
-        this.balance -= amount;
+        if(this.balance > amount){
+            this.balance -= amount;
+        } else {
+            console.log(`insufficient amout you will be charged $5`);
+            this.balance -= amount;
+        }
+        
     }
     displayAccountInfo() {
-        console.log(`balance: ${this.balance}, intrest rate: ${this.intRate}`)
+        console.log(`balance: ${this.balance}, intrest rate: ${this.intRate}`);
     }
     yieldInterest() {
-        console.log(`interest rate: ${this.intRate}`)
+        if (this.balance > 0){
+            this.balance *= (1+ this.intRate);
+        }
     }
 }
